@@ -1,0 +1,91 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AIR+ Core Banking Migration – Project Refinement</title><link rel="stylesheet" href="style.css"></head><body><header><h1>AIR+ Core Banking Migration – Project Refinement</h1><p>Jean-Marc Mukendi | IT 497</p></header><nav><a href="index.html">Home</a><a href="spiritual.html">Spiritual Growth</a><a href="professional.html">Professional Portfolio</a><a href="project.html">AIR+ Project Refinement</a></nav><main><section><p>AIR+ CORE BANKING MIGRATION</p>
+<p>Project Refinement Plan • Technical and Ethical Improvements</p>
+<p>Jean-Marc Mukendi | Ensign College | IT 497 / Capstone | November 2026</p>
+<h1>1. Project overview and scope</h1>
+<p>The AIR+ project involved migration from the legacy Orbit Core Banking environment to the target Amplitude platform. My documented role was Data Migration Coordinator, with responsibilities related to data profiling and cleansing, mapping between legacy and target structures, and ETL scripts and transformation activities. This document proposes refinements to strengthen the migration approach. The recommendations are presented as improvements and controls, not as claims that every item was implemented during the original project.</p>
+<h1>2. Key challenges addressed</h1>
+<p>Data quality: legacy records may contain missing, duplicated, inconsistent, or incorrectly formatted values.</p>
+<p>Mapping complexity: fields and business meanings in the legacy system may not correspond directly to the target system.</p>
+<p>Transformation risk: ETL logic can unintentionally omit, duplicate, truncate, or alter data.</p>
+<p>Reconciliation: teams need evidence that source totals and target totals agree within approved tolerances.</p>
+<p>Operational continuity: migration activities must be coordinated to reduce disruption to critical banking operations.</p>
+<p>Confidentiality: migration datasets may contain sensitive customer and financial information.</p>
+<h1>3. Proposed technical refinements</h1>
+<h2>3.1 Formal data profiling and quality rules</h2>
+<p>Create a documented data-quality rule catalogue before migration. Rules should identify required fields, valid formats, permitted ranges, referential integrity expectations, duplicate detection, and exception categories. Produce a baseline profile and compare it with post-cleansing results.</p>
+<p>Decision rationale: measurable rules make quality decisions repeatable and reduce reliance on informal judgment.</p>
+<p>Evidence to retain: approved rule catalogue, anonymized profiling summary, exception log, and sign-off record.</p>
+<h2>3.2 Version-controlled mapping specification</h2>
+<p>Maintain a mapping document that records each source field, target field, transformation rule, default or null-handling rule, validation rule, and business owner. Apply version control and formal approval to changes.</p>
+<p>Decision rationale: mapping changes can affect balances, customer records, and downstream processes; traceability makes changes reviewable.</p>
+<p>Evidence to retain: mapping versions, change history, approval records, and test cases.</p>
+<h2>3.3 Controlled ETL execution</h2>
+<p>Separate extraction, transformation, and loading into controlled stages. Use repeatable scripts, parameterized configuration, execution logs, row counts, error handling, and restart procedures. Where possible, use transaction boundaries and idempotent processing so a rerun does not create duplicate records.</p>
+<p>Decision rationale: controlled execution improves repeatability, diagnosability, and recovery from failures.</p>
+<p>Evidence to retain: sanitized run logs, script version identifiers, reconciliation counts, and exception summaries.</p>
+<h2>3.4 Multi-level reconciliation</h2>
+<p>Reconcile records at multiple levels: total row counts, key-field completeness, unique identifiers, account-level or product-level totals where approved, and business-approved control totals. Investigate variances before accepting a migration batch.</p>
+<p>Decision rationale: a single row-count check cannot prove that migrated records are semantically correct.</p>
+<p>Evidence to retain: reconciliation report, variance explanations, approvals, and unresolved-item register.</p>
+<h2>3.5 Test and rollback readiness</h2>
+<p>Define test scenarios for normal records, edge cases, invalid data, duplicates, missing values, and high-volume batches. Establish clear go/no-go criteria and a documented rollback or recovery approach approved by the project owners.</p>
+<p>Decision rationale: testing and recovery planning reduce the impact of unexpected defects during a critical transition.</p>
+<p>Evidence to retain: test plan, test results, defect register, go/no-go checklist, and rollback approval.</p>
+<h1>4. Ethical considerations and spiritual alignment</h1>
+<h2>Privacy and confidentiality</h2>
+<p>Use only authorized access, restrict datasets to approved personnel, mask or tokenize data in non-production environments, and never include customer-level data in a public portfolio. This reflects Integrity and Service and respect for the people represented by the data.</p>
+<h2>Accuracy and transparency</h2>
+<p>Do not conceal failed records or unexplained variances. Report limitations, exceptions, and unresolved defects clearly. This reflects integrity and accountability.</p>
+<h2>Least privilege and stewardship</h2>
+<p>Grant only the access needed for each migration role, review access, and protect credentials. This reflects stewardship of systems and information entrusted to the team.</p>
+<h2>Fairness and customer impact</h2>
+<p>Consider whether data transformation rules could disadvantage particular customers or alter access to services. Escalate ambiguous business rules for authorized review rather than inventing assumptions.</p>
+<h2>Agency and diligence</h2>
+<p>Take initiative to identify risks, ask questions, document decisions, and seek feedback. This connects to the principle of Continuous Learning and Growth and the emphasis on agency in Doctrine and Covenants 58:26–28.</p>
+<h1>5. Implementation sequence</h1>
+<p>Confirm migration scope, data owners, authorized roles, and business acceptance criteria.</p>
+<p>Profile the source data and agree on quality rules with business and technical stakeholders.</p>
+<p>Approve and version the source-to-target mapping specification.</p>
+<p>Develop or review controlled ETL scripts and create repeatable test datasets using masked or synthetic information where appropriate.</p>
+<p>Execute test migrations, reconcile results, log exceptions, and obtain approvals for unresolved issues.</p>
+<p>Conduct a formal go/no-go review and confirm rollback or recovery readiness before production activity.</p>
+<p>After migration, perform agreed post-load checks, monitor incidents, and document lessons learned.</p>
+<h1>6. Risks and mitigations</h1>
+<h1>7. Expected impact and measures</h1>
+<p>The proposed refinements are intended to improve traceability, data quality assurance, controlled execution, recovery readiness, and protection of sensitive information. They should be evaluated using measurable indicators such as the percentage of records passing agreed validation rules, number and age of unresolved exceptions, reconciliation variance, ETL failure and rerun rates, completion of access reviews, and formal sign-off completion. No numerical improvement is claimed here because project measurement results were not provided for this assignment.</p>
+<h1>8. Reflection and lessons learned</h1>
+<p>This refinement exercise helped me see that a successful migration is not defined only by moving data from one platform to another. It also depends on trust, accountability, and the quality of decisions made throughout the process. I would give greater attention to documenting rules, validating assumptions, and making exceptions visible to the right people. These practices connect my technical responsibilities with Integrity and Service. Reflection helps me identify what can be improved, justify decisions, and apply lessons to future projects.</p>
+<h1>References</h1>
+<p>The Church of Jesus Christ of Latter-day Saints. (n.d.). Doctrine and Covenants 58:26–28. https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&amp;id=p26-p28#p26</p>
+<table>
+<tr>
+<th>Risk</th>
+<th>Potential impact</th>
+<th>Mitigation</th>
+</tr>
+<tr>
+<td>Incorrect mapping</td>
+<td>Wrong or incomplete information in target system</td>
+<td>Approved mapping, peer review, test cases, reconciliation</td>
+</tr>
+<tr>
+<td>ETL failure or rerun error</td>
+<td>Missing or duplicated records</td>
+<td>Execution logs, restart controls, idempotent processing, recovery plan</td>
+</tr>
+<tr>
+<td>Unresolved data exceptions</td>
+<td>Customer or operational errors</td>
+<td>Exception register, named owners, acceptance criteria, escalation</td>
+</tr>
+<tr>
+<td>Unauthorized data exposure</td>
+<td>Privacy and compliance harm</td>
+<td>Least privilege, masking, secure transfer, access reviews</td>
+</tr>
+<tr>
+<td>Unplanned service disruption</td>
+<td>Operational interruption</td>
+<td>Cutover plan, go/no-go criteria, rollback readiness, stakeholder communication</td>
+</tr>
+</table></section></main><footer>IT 497 • Ensign College • November 2026</footer></body></html>
